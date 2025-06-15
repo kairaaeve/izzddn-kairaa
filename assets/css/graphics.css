@@ -1,0 +1,36 @@
+.spinning-wreath {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 500px; /* adjust to fit */
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  animation: none !important;
+  pointer-events: none;
+  opacity: 1; /* optional fade effect */
+}
+
+.title h2 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make the wreath rotate slowly : spin-slow 60s linear infinite */ 
+@keyframes spin-slow {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.corner-floral {
+  position: fixed;               /* so it never disappears or scrolls away */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  z-index: 1;                    /* behind your content */
+  pointer-events: none;
+}

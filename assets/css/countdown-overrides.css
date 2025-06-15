@@ -1,0 +1,89 @@
+/* make labels and rotor groups align as equal-width columns */
+.countdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* flex-row for your 4 labels */
+.countdown-labels {
+  display: flex;
+  justify-content: center;
+  margin-bottom: .5rem;
+}
+.countdown-labels span {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+/* ensure FlipDown rotor groups match the label widths */
+#flipdown {
+  display: flex !important;          /* override FlipDown’s defaults */
+  justify-content: center !important;
+}
+#flipdown .rotor-group {
+  flex: 1 !important;
+  min-width: 3.5rem;                 /* tweak this to fit your digits */
+  max-width: 3.5rem;
+}
+
+/* 1) kill all of FlipDown’s colon separators */
+#flipdown .flipdown__separator {
+  display: none !important;
+}
+
+/* 2) only show the first four rotor-groups (i.e. Hari, Jam, Minit, Saat) */
+#flipdown .rotor-group:nth-of-type(n+5) {
+  display: none !important;
+}
+
+
+/* ────────────────────────────────────────────────────────────
+   Make each two-digit group sit side-by-side instead of stacked
+   ──────────────────────────────────────────────────────────── */
+
+/* Ensure each rotor-group is a horizontal flex container */
+#flipdown .rotor-group {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  /* 2 × your single-digit width (3.5rem) = enough room for both digits */
+  min-width: 7rem !important;
+  max-width: 7rem !important;
+}
+
+/* Now split that space evenly between the two .flipdown__piece children */
+#flipdown .rotor-group .flipdown__piece {
+  flex: 1 !important;
+  max-width: 50% !important;
+}
+
+
+/* ────────────────────────────────────────────────────────────
+   Remove dot-like divider on flip pieces
+   ──────────────────────────────────────────────────────────── */
+#flipdown .rotor-group .flipdown__piece::before,
+#flipdown .rotor-group .flipdown__piece::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* ────────────────────────────────────────────────────────────
+   Additional cleanup: remove any remaining rotor pseudo-elements
+   ──────────────────────────────────────────────────────────── */
+#flipdown .rotor::before,
+#flipdown .rotor::after,
+#flipdown .rotor-group::before,
+#flipdown .rotor-group::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}

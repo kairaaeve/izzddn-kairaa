@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
+
+@font-face {
+  font-family: "Allura";
+  src: url("https://www.thekahwin.my/assets/fonts/Allura/Allura-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Fontleroy";
+  src: url("https://www.thekahwin.my/assets/fonts/Fontleroy/FontleroyBrownNF.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("https://www.thekahwin.my/assets/fonts/Cinzel/Cinzel-Regular.ttf") format("truetype");
+}
+
+/*WALIMATULURUS*/
+.event {
+  position: relative;
+  top: -100px; /* Moves it up */
+}
+
+/* Big script for the names (Izzuddin & Kairaa) using Great Vibes */
+.title h2.text-1[text-custom="bride1_short"] {
+  display: block !important;
+  text-align: center !important;
+  font-family: "Great Vibes", cursive !important;
+  font-size: 80px !important;
+  line-height: 1.1 !important;
+  letter-spacing: 1px !important;
+  margin: 0 !important;
+  margin-top: -100px !important;
+  color: #000 !important;
+}
+
+.title h2.text-3[text-custom="bride2_short"] {
+  display: block !important;
+  text-align: center !important;
+  font-family: "Great Vibes", cursive !important;
+  font-size: 80px !important;
+  line-height: 1.1 !important;
+  letter-spacing: 1px !important;
+  margin: 0 !important;
+  color: #000 !important;}
+
+/* Slightly smaller ampersand */
+h2[text-custom="bride3_short"] {
+  display: block !important;
+  text-align: center !important;
+  font-family: "Fontleroy", serif !important;
+  font-size: 40px !important;
+  line-height: 1 !important;
+  margin: 0.2em auto !important;
+  color: #000 !important;
+}
+
+/* Long Bride names */
+[text-custom="bride_long"] {
+  display: block !important;
+  font-family: "Allura", cursive !important;
+  font-size: 30px !important;
+  color: #000 !important;
+  line-height: 1 !important;
+  letter-spacing: 1px !important;
+  margin: 0 !important;
+}
+
+/* Parent names */
+[text-custom="parent"] {
+  display: block !important;
+  font-family: "Cinzel", serif !important;
+  font-size: 20px !important;
+  color: #000 !important;
+  line-height: 1 !important;
+  letter-spacing: 1px !important;
+  margin: 0 !important;
+}
+
+/* ── Centered date with horizontal lines ── */
+
+.date-line-wrapper {
+  position: relative;
+  top: 20px;
+}
+
+/*26 Julai 2025*/
+.date-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: -2px;
+  margin: 12px 0;
+}
+
+/*26*/
+.date-middle-center {
+  font-family: 'Playfair Display', serif;
+  font-size:55px;  /* ⬅ Edit this */
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+  top: -6px;  /* move upward */
+  padding: 16px 12px;
+}
+
+/*Julai*/
+.date-middle-left {
+  font-family: 'Cactus Classical Serif', serif;
+  font-size: 18px;
+  font-weight: 550;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  padding: 24px 12px;        /* More space to make room for lines */
+  min-width: 80px;           /* Ensure it’s wide enough */
+}
+
+/*2025*/
+.date-middle-right {
+  font-family: 'Cactus Classical Serif', serif;
+  font-size: 18px;
+  font-weight: 555;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  padding: 24px 12px;
+  min-width: 80px;
+}
+
+/*BORDERS JULY and 2025*/
+.date-divider-line {
+  border: none;
+  border-top: 1px solid #000;
+  width: 60px;
+  margin: 8px auto;
+  opacity: 0.5;
+}
+
+/*SABTU*/
+.date-top {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: -35px !important;
+}
+
+/*30 Muharram 1447H*/
+.date-bottom {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: -35px !important;
+}
+
+
+/*LOCATION*/
+.location {
+  position: relative;
+  top: 30px;
+}
+
+/*BUKA*/
+.open{
+  position: relative;
+  top: 50px; /* Moves it up */
+  color: white !important;  /* text color */
+
+}
+
+.btn-main.btn-open {
+  background-color: #ffaab8 !important; /* Change this to your preferred color */
+  color: #000000 !important;  /* Text/icon color */
+  border: none !important;
+  padding: 12px 24px;
+  border-radius: 30px;
+}
+
+
+/* NOT USED BUT IN CASE NEEDED
+
+  background-color: #ef6b7b !important; 
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+
+  */
