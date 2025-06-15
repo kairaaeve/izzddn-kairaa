@@ -34,3 +34,59 @@
   z-index: 1;                    /* behind your content */
   pointer-events: none;
 }
+
+/*APP BAR*/
+
+/* Override the mobile bottom nav background */
+.appbar-nav {
+  background-color: #c5aef2 !important;
+  overflow: visible !important;
+  position: relative !important;
+}
+
+
+
+/* Floating Home Icon Perfectly Centered */
+.appbar-nav li[data-open="home"] i {
+  border: none !important;      /* remove default green border */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  position: absolute !important;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1rem !important;        /* adjust vertical lift */
+  background-color: #e796ff !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;  /* make circle */
+  box-shadow: 0 0 0 3px #ffee9b !important; /* white ring */
+  font-size: 1.8rem !important;    /* adjust icon size if needed */
+  overflow: visible !important;
+}
+
+/* Align the home label with other nav labels */
+.appbar-nav li[data-open="home"] span {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding-top: 3.4rem !important; /* adjust vertical alignment if needed */
+  vertical-align: middle !important;
+  font-size: 18px !important;
+}
+
+/* allow the home icon to overflow the nav */
+.appbar,
+.appbar-nav {
+  overflow: visible !important;
+}
+
+/* Remove the semicircular notch from the nav container */
+.appbar-nav::before {
+  display: none !important;
+  content: none !important;
+}
+
+.container-countdown {
+ background-color: #c5aef2 !important;
+}

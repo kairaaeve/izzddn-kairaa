@@ -197,3 +197,20 @@ h2[text-custom="bride3_short"] {
   display: inline-block;
 
   */
+
+  /*MAIN CONTENT*/
+
+.text-main { 
+   font-size: 20px !important;
+   color: #000 !important;
+   border: 1px solid #F5F5DC !important;  /* soft beige border */
+   padding: 4px !important;                /* optional spacing */
+   background-color: #f5f5dc9d !important;
+   border-radius: 17px !important;
+ }
+
+ .text-main-ucapan {
+ font-size: 15px !important;
+ color: #000 !important;
+
+ }
