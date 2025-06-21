@@ -70,6 +70,10 @@ h2[text-custom="bride3_short"] {
 }
 
 /* Parent names */
+.parent-wrapper {
+  margin-top: 50px; /* Creates space from whatever is above */
+}
+
 [text-custom="parent"] {
   display: block !important;
   font-family: "Cinzel", serif !important;
@@ -209,9 +213,26 @@ h2[text-custom="bride3_short"] {
    background-color: #f5f5dc9d !important;
    border-radius: 17px !important;
  }
+ 
 
- .text-main-ucapan {
- font-size: 15px !important;
+ /*UCAPAN*/
+
+.text-ucapan {
+  font-size: 15px !important;
+  color: #000 !important;
+  margin-top: 30px; /* Increase to move down, decrease or use negative to move up */
+}
+
+ /*GALERI*/
+ .mb-4 {  
+ font-size: 30px !important;
  color: #000 !important;
+ text-align: center !important;
+ position: relative;
+ top: 15px;
+}
 
- }
+.container-galeri {
+  background-color: #c5aef2 !important; /* if not already set elsewhere */
+  height: 100px;        /* or set fixed height like 400px */
+}

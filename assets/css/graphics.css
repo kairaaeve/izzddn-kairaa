@@ -90,3 +90,48 @@
 .container-countdown {
  background-color: #c5aef2 !important;
 }
+
+/*BLOCK SCROLLING FOR MAINPAGE*/
+.main-container {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/*GALERI PICS*/
+
+/* Izzuddin baby*/
+.container-pic {
+  width: 100%;       /* make it full width */
+  max-width: 200px;  /* limit how big it grows */
+  display: block;
+  margin: 0 auto;    /* center the image */
+  border-radius: 12px; /* optional rounded corners */
+}
+
+.container-pic2 {
+  width: 100%;       /* make it full width */
+  max-width: 200px;  /* limit how big it grows */
+  display: block;
+  margin: 0 auto;    /* center the image */
+  border-radius: 12px; /* optional rounded corners */
+}
+
+.gallery-collage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 10px;
+}
+.gallery-collage img {
+  width: calc(33.33% - 12px);
+  border-radius: 10px;
+  object-fit: cover;
+  height: 200px;
+}
+@media (max-width: 768px) {
+  .gallery-collage img {
+    width: calc(50% - 12px);
+    height: 180px;
+  }
+}
