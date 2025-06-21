@@ -117,12 +117,12 @@
 }
 
 .gallery-collage {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
   gap: 12px;
-  justify-content: center;
-  padding: 10px;
+  justify-items: center;
 }
+
 .gallery-collage img {
   width: calc(33.33% - 12px);
   border-radius: 10px;

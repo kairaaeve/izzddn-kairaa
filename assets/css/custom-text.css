@@ -209,12 +209,13 @@ h2[text-custom="bride3_short"] {
 
  /*UCAPAN*/
 
- .text-suka {
+ .text-suka { /*dengan penuh kesyukuran*/
   position: relative;
   top: -15px;
  }
 
-.text-ucapan {
+
+.text-ucapan {  /*mengalukan*/
   font-size: 15px !important;
   color: #000 !important;
   margin-top: 50px; /* Increase to move down, decrease or use negative to move up */
@@ -283,7 +284,7 @@ h2[text-custom="bride3_short"] {
   display: block !important;
   font-family: 'Tangerine', cursive !important;
   font-weight: 700 !important;
-  font-size: 28px !important;
+  font-size: 35px !important;
   color: #000 !important;
   line-height: 1 !important;
   letter-spacing: 1px !important;
