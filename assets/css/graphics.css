@@ -384,6 +384,21 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
   gap: 12px;
-  justify-items: center;
   box-sizing: border-box;
+}
+
+.gallery-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.gallery-collage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
 }
