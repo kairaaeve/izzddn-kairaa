@@ -374,3 +374,16 @@
   font-family: 'Meie Script', cursive;
   color: #000000 !important;   
 }
+
+/*OVERRIDE GALLERY COLUMN*/
+.gallery-collage {
+  width: 100%;
+  max-width: 500px; /* Optional limit */
+  margin: 0 auto;
+  padding: 0 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+  gap: 12px;
+  justify-items: center;
+  box-sizing: border-box;
+}
