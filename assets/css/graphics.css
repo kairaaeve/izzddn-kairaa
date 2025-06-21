@@ -273,7 +273,7 @@
 
 .gallery-collage {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Lock into 2 columns */
   gap: 12px;
   justify-items: center;
 }
