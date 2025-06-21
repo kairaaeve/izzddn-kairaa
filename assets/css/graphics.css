@@ -402,3 +402,10 @@
   border-radius: 10px;
   display: block;
 }
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 8px;
+  }
+}
