@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Meie+Script&family=Tangerine:wght@400;700&display=swap');
+
 .spinning-wreath {
   position: absolute;
   top: 20%;
@@ -91,6 +93,159 @@
  background-color: #c5aef2 !important;
 }
 
+/*POP UP NAVBAR*/
+
+/* Popup container background */
+.modal-content {
+  background-color: #fdfaff !important; /* soft pastel background */
+  border-radius: 12px;
+  border: 2px solid #c5aef2;
+  box-shadow: 0 0 10px rgba(165, 125, 245, 0.2);
+}
+
+
+
+
+
+/* Header bar (KENALAN) */
+/* Modal Popup Overrides */
+.appbar-modal .modal-content {
+  background-color: #fdfaff !important;
+  border-radius: 12px;
+  border: 2px solid #c5aef2;
+  box-shadow: 0 0 10px rgba(165, 125, 245, 0.2);
+}
+
+/* Header styling */
+.appbar-modal .modal-header {
+  background-color: #a47df5 !important;
+  color: white !important;
+  border-bottom: 2px solid #c5aef2;
+}
+
+.appbar-modal .modal-header .modal-title {
+  color: white !important;
+  font-weight: 600;
+}
+
+/* Contact list styling */
+.appbar-modal .modal-body .list-contact label {
+  color: #6a4bc8 !important;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Icon buttons (phone, WhatsApp) */
+.appbar-modal .modal-body .list-contact a span {
+  background-color: #a47df5 !important; /* soft purple */
+  color: white !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.appbar-modal .modal-body .list-contact a span:hover {
+  background-color: #8e6be0 !important;
+}
+
+/* Fix olive border in modal */
+.appbar-modal .modal-content {
+  border: none !important;
+  box-shadow: 0 0 10px rgba(165, 125, 245, 0.15) !important; /* optional purple glow */
+}
+
+/* Optional: strengthen modal background corners */
+.appbar-modal .modal-dialog {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+/* Remove thin olive line under Kenalan header */
+.appbar-modal .modal-header {
+  border-bottom: none !important;
+}
+
+/* Remove any extra styling causing double layers */
+.appbar-modal .modal-body .list-contact a {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+/*LOKASI*/
+/* Location modal: style Google Maps and Waze buttons */
+.appbar-modal[data-modal="location"] .btn-main {
+  background-color: #a47df5 !important; /* soft purple */
+  color: white !important;
+  border: none !important;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.appbar-modal[data-modal="location"] .btn-main:hover {
+  background-color: #8e6be0 !important;
+}
+
+/*KALENDAR*/
+/* Calendar modal: Apple & Google button style */
+.appbar-modal[data-modal="calendar"] .btn-main {
+  background-color: #a47df5 !important; /* pastel purple */
+  color: white !important;
+  border: none !important;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.appbar-modal[data-modal="calendar"] .btn-main:hover {
+  background-color: #8e6be0 !important;
+}
+
+/* Ensure selected date cell is styled with highest specificity and !important */
+.jsCalendar table td.jsCalendar-selected {
+  background-color: #a47df5 !important;
+  color: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 10px rgba(165, 125, 245, 0.2) !important;
+  border: none !important;
+}
+
+/* Override selected date in calendar modal */
+.appbar-modal[data-modal="calendar"] .jsCalendar .jsCalendar-selected {
+  background-color: #a47df5 !important;  /* pastel purple */
+  color: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 10px rgba(165, 125, 245, 0.2) !important;
+}
+
+.jsCalendar .jsCalendar-selected {
+  background-color: #a47df5 !important;
+  color: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 10px rgba(165, 125, 245, 0.2) !important;
+  border: none !important;
+}
+
+.jsCalendar .jsCalendar-selected span {
+  font-family: 'Edu NSW ACT Hand Pre', cursive !important;
+  font-weight: 600;
+}
+
 /*BLOCK SCROLLING FOR MAINPAGE*/
 .main-container {
   overflow: hidden;
@@ -124,14 +279,98 @@
 }
 
 .gallery-collage img {
-  width: calc(33.33% - 12px);
+  width: 100%;
   border-radius: 10px;
   object-fit: cover;
   height: 200px;
 }
-@media (max-width: 768px) {
-  .gallery-collage img {
-    width: calc(50% - 12px);
-    height: 180px;
+
+
+/* Thank You Message Styles */
+#thankYouMessage {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: #e6f4ea;
+  border: 2px solid #9be4b5;
+  color: #2e7d32;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInScale 0.5s ease-in-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Guestbook Form Styling */
+#guestbookForm textarea,
+#guestbookForm input {
+  border: 2px solid #c5aef2;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 16px;
+  font-family: inherit;
+  color: #444;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#guestbookForm textarea:focus,
+#guestbookForm input:focus {
+  outline: none;
+  border-color: #c5aef2;
+  box-shadow: 0 0 0 3px rgba(165, 125, 245, 0.2);
+}
+
+/* Submit button */
+#guestbookForm button {
+  background-color: #af88ff !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 10px !important;
+  padding: 0.75rem 1rem;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#guestbookForm button:hover {
+  background-color: #8e6be0 !important;
+  transform: translateY(-1px);
+}
+
+/*DOA*/
+
+.card-prayer {
+  color: #6a4bc8 !important; /* Soft purple */
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: center;
+  padding: 1.5rem;
+  border: 2px solid #c5aef2;
+  border-radius: 12px;
+  background-color: #fdfaff;
+  font-family: 'Meie Script', cursive;
+
+  /* 🌟 Border glow */
+  box-shadow: 0 0 12px 2px rgba(197, 174, 242, 0.5);
+}
+
+.card-prayer p {
+  font-size: 20px !important;
+  line-height: 1.8;
+  font-family: 'Meie Script', cursive;
+  color: #000000 !important;   
 }

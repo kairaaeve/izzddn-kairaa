@@ -300,72 +300,32 @@
                             </div>
 
             <div class="guestbook-form">
-                <form class="formGuestbook" data-form="card/submitGuestbook">
-                    <input type="hidden" name="thekahwin_csrf_token" value="" />
-                    <input type="hidden" name="card_id" value="1129">
-                    <input type="hidden" name="card_token" value="9828a2fc0cda3d0ea2b4a02f99026cb2">
-                    <div class="form-group">
-                                                    <textarea class="form-control" name="ucapan" placeholder="Ucapan" rows="4" maxlength="180" required></textarea>
-                                            </div>
-                    <div class="form-group">
-                                                    <input class="form-control" name="nama" placeholder="Nama" maxlength="10" required>
-                                            </div>
-                    <button class="btn btn-main w-100">
-                        <i class="fa fa-pen me-2"></i>
-                                                    Hantar
-                                            </button>
+                <form id="guestbookForm">
+                  <textarea class="form-control" name="ucapan" placeholder="Ucapan" rows="4" maxlength="180" required></textarea>
+                  <input class="form-control" name="nama" placeholder="Nama" maxlength="10" required>
+                  <button class="btn btn-main w-100" type="submit">
+                    <i class="fa fa-pen me-2"></i> Hantar
+                  </button>
                 </form>
-            </div>
-        </div>
-    </div>
 
-            <div class="container container-gift-money">
-            <div data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000">
-                <div class="card-qr">
-                    <div class="title">
-                        MONEY GIFT
-                    </div>
-                    <div class="content">
-                        <div class="d-flex m-auto align-items-center justify-content-center mb-3">
-                            <img class="image-qr" src="https://www.thekahwin.my/upload/card/1129/Terima_kasih_sudi_hadir_majlis_5.png">
-                            <a class="btn btn-main btn-download" href="https://www.thekahwin.my/upload/card/1129/Terima_kasih_sudi_hadir_majlis_5.png" download>
-                                <i class="fa fa-download"></i>
-                            </a>
-                        </div>
-                        <div class="form-control d-flex mb-3">
-                            <div class="w-100 text-start me-2">
-                                <label>
-                                                                            Nombor Akaun
-                                                                    </label>
-                                <p>12345678</p>
-                                <p>Cloudy The Great</p>
-                            </div>
-                            <button class="btn btn-main btn-copy">
-                                <i class="fa fa-copy"></i>
-                            </button>
-                        </div>
-                        <div class="form-control d-flex mb-3">
-                            <div class="w-100 text-start">
-                                <label>
-                                                                            Nama Bank
-                                                                    </label>
-                                <p>Cloudbank Purrhad</p>
-                            </div>
-                        </div>
-                    </div>
+                <div id="thankYouMessage" style="display:none; margin-top: 1rem; color: green; font-weight: bold;">
+                  ✅ Terima kasih! Ucapan anda telah dihantar.
                 </div>
             </div>
         </div>
-    
-    <div class="container container-prayer">
-        <div data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000">
-            <div class="card-prayer">
-                                    <p>"Allah yang Maha Pengasih, berkatilah hubungan pasangan pengantin ini dengan keharmonian dan kepercayaan. Bantulah mereka untuk sentiasa saling hormat-menghormati dan mengasihi sesama sendiri." 
-
-Aamin, Ya Rabbal A'lamin</p>
-                            </div>
-        </div>
     </div>
+
+    
+    
+     <div class="container container-prayer" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+         <div class="card-prayer">
+         <p>"Allah yang Maha Pengasih, berkatilah hubungan pasangan pengantin ini dengan keharmonian dan kepercayaan. Bantulah mereka untuk sentiasa saling hormat-menghormati dan mengasihi sesama sendiri.<br><br>
+         Aamin, Ya Rabbal A'lamin"</p>
+          </div>
+     </div>
+
+    
+    
 </div>
 
 
@@ -618,6 +578,32 @@ Aamin, Ya Rabbal A'lamin</p>
             <script src="assets/js/copy-handler.js"></script>
 
 </body>
+
+<script>
+document.getElementById('guestbookForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch("https://script.google.com/macros/s/AKfycbygk_nZiqc9O-Rz8e02Re6kw1qcZogibAxpirDMCqagEBpw9sMlcMjNcSYezMvjNTv2CQ/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      document.getElementById('thankYouMessage').style.display = 'block';
+      form.reset();
+    } else {
+      alert('Error menghantar ucapan. Sila cuba lagi.');
+    }
+  })
+  .catch(error => {
+    alert('Ralat rangkaian. Sila cuba semula.');
+    console.error(error);
+  });
+});
+</script>
 
 </html>
 <style>
