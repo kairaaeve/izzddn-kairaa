@@ -209,8 +209,8 @@
 
 /*BLOCK SCROLLING FOR MAINPAGE*/
 .main-container {
-  overflow: hidden;
-  height: 100vh;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /*GALERI PICS*/
@@ -232,19 +232,6 @@
   border-radius: 12px; /* optional rounded corners */
 }
 
-.gallery-collage {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Lock into 2 columns */
-  gap: 12px;
-  justify-items: center;
-}
-
-.gallery-collage img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  height: 200px;
-}
 
 
 /* Thank You Message Styles */
@@ -336,23 +323,15 @@
   color: #000000 !important;   
 }
 
-/*OVERRIDE GALLERY COLUMN*/
+/* Unified .gallery-collage styles */
 .gallery-collage {
   width: 100%;
-  max-width: 500px; /* Optional limit */
+  max-width: 500px;
   margin: 0 auto;
-  padding: 0 12px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
-  gap: 12px;
-  box-sizing: border-box;
-}
-
-.gallery-collage {
+  padding: 0 16px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
-  padding: 0 16px;
   box-sizing: border-box;
 }
 
@@ -364,12 +343,6 @@
   display: block;
 }
 
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
-    gap: 8px;
-  }
-}
 
 /*RSVP POP UP*/
 
@@ -486,4 +459,82 @@
   border-radius: 10px;
   font-weight: bold;
   box-shadow: 0 0 8px #caa9f8;
+}
+
+.floral-top,
+.floral-bottom {
+  position: fixed;
+  width: 100vw;
+  height: auto;
+  z-index: 1; /* or even higher like 10 */
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.floral-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto; /* or adjust to fit your image height */
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  z-index: 1; /* Must be lower than content but higher than background */
+  pointer-events: none;
+}
+
+.floral-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  background-image: url('/assets/img/floral-bottom.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  z-index: 1; /* Must be lower than content but higher than background */
+  pointer-events: none;
+}
+
+
+.floral-top-fr,
+.floral-bottom-fr {
+  position: fixed;
+  width: 100vw;
+  height: auto;
+  z-index: 1; /* or even higher like 10 */
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.floral-top-fr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 250px; /* or adjust to fit your image height */
+  object-fit: cover;
+  z-index: 2; /* Make sure it's above background but below content */
+  pointer-events: none;
+}
+
+.floral-bottom-fr {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  background-image: url('/assets/img/floral-bottom.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  z-index: 1; /* Must be lower than content but higher than background */
+  pointer-events: none;
 }
