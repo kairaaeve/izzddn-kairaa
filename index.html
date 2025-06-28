@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="https://www.thekahwin.my/assets/css/main.css?v=1749917507">
     <link rel="stylesheet" href="https://www.thekahwin.my/assets/css/animated.css?v=1749917507">
     <link rel="stylesheet" href="https://www.thekahwin.my/assets/css/card.css?v=1749917507">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Card CSS Files -->
 
@@ -99,10 +100,37 @@
   border-radius: 4px;
   font-weight: bold;
 }
+
+  .music-toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    background-color: #fff8ff;
+    border: 2px solid #ddb7e0;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+  }
+
+  .music-toggle-btn:hover {
+    background-color: #f0dbf3;
+    transform: scale(1.1);
+  }
     </style>
     </head>
 
 <body>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="assets/audio/inside-out.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button id="toggle-music" class="music-toggle-btn">🔊</button>
 
 
 
@@ -305,14 +333,14 @@
 
                 <div class="dress-row">
                   <div class="dress-block">
-                        <div class="text-dc"><b>🧑🏻‍🦱 Lelaki</b></div>
+                        <div class="text-dc"><b>Lelaki</b></div>
                         <div class="text-ou">❥ Baju Melayu <br> ❥ Jubah <br> ❥ Kasut bertutup</div>
                  </div>
 
                   <div class="divider-dress"></div>
 
                   <div class="dress-block">
-                        <div class="text-dc"><b>🧕🏻 Perempuan</b></div>
+                        <div class="text-dc"><b>Perempuan</b></div>
                         <div class="text-ou">❥ Baju Kurung <br> ❥ Jubah <br> ❥ Kasut bertutup</div>
                     </div>
                 </div>
@@ -343,16 +371,36 @@
      <div class="container container-gallery">
             <div data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000">
                  <div class="gallery-collage">
-                   <img src="assets/gallery/izzuddin-1.jpeg" alt="Gallery 1">
-                   <img src="assets/gallery/izzuddin-2.jpeg" alt="Gallery 2">
-                   <img src="assets/gallery/k-baby.jpg" alt="Gallery 3">
-                   <img src="assets/gallery/k-tokbak.png" alt="Gallery 4">
-                   <img src="assets/gallery/i-k-beach.png" alt="Gallery 5">
-                   <img src="assets/gallery/i-k-genting.png" alt="Gallery 6">
-                   <img src="assets/gallery/i-k-starhill.png" alt="Gallery 7">
-                   <img src="assets/gallery/i-k-birthday.JPG" alt="Gallery 8">
-                   <img src="assets/gallery/i-k-tunang2.JPG" alt="Gallery 9">
-                   <img src="assets/gallery/i-k-tunang3.JPG" alt="Gallery 10">
+                   <a href="assets/gallery/izzuddin-1.jpeg" data-lightbox="gallery">
+                     <img src="assets/gallery/izzuddin-1.jpeg" alt="Gallery 1">
+                   </a>
+                   <a href="assets/gallery/izzuddin-2.jpeg" data-lightbox="gallery">
+                     <img src="assets/gallery/izzuddin-2.jpeg" alt="Gallery 2">
+                   </a>
+                   <a href="assets/gallery/k-baby.jpg" data-lightbox="gallery">
+                     <img src="assets/gallery/k-baby.jpg" alt="Gallery 3">
+                   </a>
+                   <a href="assets/gallery/k-tokbak.png" data-lightbox="gallery">
+                     <img src="assets/gallery/k-tokbak.png" alt="Gallery 4">
+                   </a>
+                   <a href="assets/gallery/i-k-beach.png" data-lightbox="gallery">
+                     <img src="assets/gallery/i-k-beach.png" alt="Gallery 5">
+                   </a>
+                   <a href="assets/gallery/i-k-genting.png" data-lightbox="gallery">
+                     <img src="assets/gallery/i-k-genting.png" alt="Gallery 6">
+                   </a>
+                   <a href="assets/gallery/i-k-starhill.png" data-lightbox="gallery">
+                     <img src="assets/gallery/i-k-starhill.png" alt="Gallery 7">
+                   </a>
+                   <a href="assets/gallery/i-k-birthday.JPG" data-lightbox="gallery">
+                     <img src="assets/gallery/i-k-birthday.JPG" alt="Gallery 8">
+                   </a>
+                   <a href="assets/gallery/i-k-tunang2.JPG" data-lightbox="gallery">
+                     <img src="assets/gallery/i-k-tunang2.JPG" alt="Gallery 9">
+                   </a>
+                   <a href="assets/gallery/i-k-tunang3.JPG" data-lightbox="gallery">
+                     <img src="assets/gallery/i-k-tunang3.JPG" alt="Gallery 10">
+                   </a>
                  </div>
             </div>
      </div>
@@ -656,6 +704,7 @@
     <script src="https://www.thekahwin.my/assets/js/main.js?v=1749917507"></script>
     <script src="https://www.thekahwin.my/assets/js/card.js?v=1749917507"></script>
     <script src="https://www.thekahwin.my/assets/vendor/pleaserotate/please-rotate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
     <!-- Card Scripts -->
             <script src="https://www.thekahwin.my//assets/theme/simply-004/script.js?v=1749917507"></script>
@@ -669,7 +718,27 @@
         once: true
       });
     </script>
-</body>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const toggleBtn = document.getElementById('toggle-music');
+
+    toggleBtn.addEventListener('click', () => {
+      if (music.muted) {
+        music.muted = false;
+        toggleBtn.textContent = '🔊';
+      } else {
+        music.muted = true;
+        toggleBtn.textContent = '🔇';
+      }
+    });
+
+    // On some mobile browsers, audio must be triggered by user interaction
+    document.addEventListener('click', function enableAudioOnce() {
+      music.play().catch(() => {});
+      document.removeEventListener('click', enableAudioOnce);
+    });
+  </script>
 </body>
 
 <script>
