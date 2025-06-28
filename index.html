@@ -52,6 +52,51 @@
             <link rel="stylesheet" href="assets/css/custom-text.css">
             <link rel="stylesheet" href="assets/css/graphics.css">
             
+    <style>
+.gallery-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 0 12px;
+}
+
+.gallery-collage img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+@keyframes fadeInSmooth {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rsvp-success-message {
+  animation: fadeInSmooth 0.6s ease-out;
+}
+
+/* Pastel Calendar Styles */
+.pastel-calendar th,
+.pastel-calendar td {
+  width: 14.2%;
+  padding: 0.6rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border: 1px solid #e7dcf8;
+  background-color: #faf8ff;
+  color: #444;
+}
+
+.pastel-calendar .muted {
+  color: #ccc;
+}
+
+.pastel-calendar .highlight {
+  background-color: #a78ce3;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+    </style>
     </head>
 
 <body>
@@ -233,35 +278,45 @@
                 <hr class="hr-bold-gold">
             </div>
 
-            <div data-aos="fade-down" data-aos-delay="800" data-aos-duration="1000">
-                <label>
-                                            TEMPAT
-                                    </label>
+            <div class="highlight-box">
+              <div class="details-block1" data-aos="fade-down" data-aos-delay="800" data-aos-duration="1000">
+                <label>📍 TEMPAT</label></div>
+                <hr class="divider-gold">
                 <p class="text-main"><b>ARISYA GLASS HOUSE</b><br/> Jalan Tasik Merdeka, Bukit Pasir, 83050 Batu Pahat</p>
-            </div>
-
-                            <div data-aos="fade-down" data-aos-delay="900" data-aos-duration="1000">
-                    <label>
-                                                    KOD PEMAKAIAN
-                                            </label>
-                    <p class="text-main"><b>Warna Pastel</b><br><b>Lelaki:</b> Baju Melayu / Jubah<br/><b>Perempuan:</b> Baju Kurung / Jubah</p>
+              
+              <div class="details-block" data-aos="fade-down" data-aos-delay="900" data-aos-duration="1000">
+                <label>🎨 KOD PEMAKAIAN</label></div>
+                <hr class="divider-gold">
+                <div class="color-palette">
+                  <span style="background-color: #fdfcc1;"></span> <!-- pastel pink -->
+                  <span style="background-color: #d5ee9a;"></span> <!-- mauve blush -->
+                  <span style="background-color: #ffcad7;"></span> <!-- thistle (light purple) -->
+                  <span style="background-color: #d1b2ed;"></span> <!-- soft lavender -->
+                  <span style="background-color: #c3dcff;"></span> <!-- thistle (light purple) -->
                 </div>
-            
-            <div data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">
-                <label>
-                                            TARIKH
-                                    </label>
-                <p class="text-main">
-                    26                    JULAI                    2025                </p>
-            </div>
+                <p class="text-pastel"><i>Warna lembut dan pastel sahaja yang dibenarkan :)</i></p>
 
-            <div data-aos="fade-down" data-aos-delay="1100" data-aos-duration="1000">
-                <label>
-                                            MASA
-                                    </label>
-                <p class="text-main">
-                    08:00 PM                    -
-                    10:00 PM                </p>
+                <div class="dress-row">
+                  <div class="dress-block">
+                        <div class="text-dc"><b>🧑🏻‍🦱 Lelaki</b></div>
+                        <div class="text-ou">❥ Baju Melayu <br> ❥ Jubah <br> ❥ Kasut bertutup</div>
+                 </div>
+
+                  <div class="divider-dress"></div>
+
+                  <div class="dress-block">
+                        <div class="text-dc"><b>🧕🏻 Perempuan</b></div>
+                        <div class="text-ou">❥ Baju Kurung <br> ❥ Jubah <br> ❥ Kasut bertutup</div>
+                    </div>
+                </div>
+
+                <p class="text-pastel"><i>Tidak digalakkan memakai tshirt atau kemeja<br> Harap para tetamu dapat mengikut tema, barulah gambar cantik :) </i></p>
+             
+              <div class="details-block" data-aos="fade-down" data-aos-delay="1100" data-aos-duration="1000">
+                <label>⏰ MASA</label></div>
+                <hr class="divider-gold">
+                <p class="text-main">08:00 PM - 10:00 PM</p>
+              
             </div>
 
             
@@ -270,7 +325,11 @@
 
 <div class="container container-galeri">
   <div data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000">
-    <h4 class="mb-4">GALERI</h4>
+    <div class="label-galeri">
+        <span class="symbols">  დ ── ❤ ── დ </span>
+        <span class="title-galeri">GALERI</span>
+        <span class="symbols">  დ ── ❤ ── დ</span>
+    </div>
   </div>
 </div>
 
@@ -291,10 +350,15 @@
             </div>
      </div>
 
+            <div data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000">
+                <div class="symbols">  დ ── ❤ ── დ ── ❤ ── დ </div>
+            </div>    
     
     <div class="container container-guestbook">
         <div data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000">
-            <h4 class="mb-3">GUESTBOOK</h4>
+            <div class="label-galeri">
+              <span class="title-galeri">GUESTBOOK</span>
+            </div>
             <div class="owl-carousel owl-theme slider-guestbook mb-3">
                             </div>
 
@@ -373,12 +437,12 @@
                 <div class="modal-body">
                     <ul class="list-contact">
                                                         <li>
-                                    <label><i class="fa fa-user-circle me-2"></i>En. Darwis (Bapa Pengantin Perempuan)</label>
+                                    <label>👨🏻‍🦱 En. Darwis</label>
                                     <a href="tel:601711787008"><span class="fa fa-phone"></span></a>
                                     <a href="https://wa.me/601711787008" target="_blank"><span class="fab fa-whatsapp"></span></a>
                                 </li>
                                                         <li>
-                                    <label><i class="fa fa-user-circle me-2"></i>Pn. Fauziah (Ibu Pengantin Perempuan)</label>
+                                    <label>👩🏻‍🦱 Pn. Fauziah</label>
                                     <a href="tel:601115940772"><span class="fa fa-phone"></span></a>
                                     <a href="https://wa.me/601115940772" target="_blank"><span class="fab fa-whatsapp"></span></a>
                                 </li>
@@ -431,8 +495,24 @@
                 </div>
                 <div class="modal-body">
                     <div class="w-100 text-center mb-4">
-                                                    <div class="auto-jsCalendar" data-date="26/07/2025" data-month-format="month YYYY" data-first-day-of-the-week="2" data-navigator-position="right" data-day-format="DDD" data-language="my"></div>
-                                            </div>
+                      <div class="custom-calendar text-center">
+                        <h5 class="mb-3">🌸 Julai 2025 ✨</h5>
+                        <table class="table table-bordered pastel-calendar mx-auto" style="max-width: 350px;">
+                          <thead>
+                            <tr>
+                              <th>Isn<br>🌞</th><th>Sel<br>📖</th><th>Rab<br>🪷</th><th>Kha<br>🍰</th><th>Jum<br>🕌</th><th>Sab<br>🎠</th><th>Aha<br>🧺</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr><td class="muted">30</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                            <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+                            <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+                            <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td class="highlight">26</td><td>27</td></tr>
+                            <tr><td>28</td><td>29</td><td>30</td><td>31</td><td class="muted">1</td><td class="muted">2</td><td class="muted">3</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <a class="btn btn-main w-100 mb-3" href="https://www.thekahwin.my/card/generateICS?theme_type_id=1&card_event_type=Walimatulurus&card_date=2025-07-26&card_start_time=20%3A00%3A00&card_end_time=22%3A00%3A00&card_location=%3Cb%3EARISYA+GLASS+HOUSE%3C%2Fb%3E%3Cbr%2F%3E+Jalan+Tasik+Merdeka%2C+Bukit+Pasir%2C+83050+Batu+Pahat&card_bride_short1=Izzuddin&card_bride_short2=Kairaa&card_bride_long1=Khairunnisa+binti+Darwis&card_bride_long2=Muhammad+Izzuddin+bin+Mohd+Zulkefli" target="_blank">
@@ -460,7 +540,7 @@
                     <button type="button" class="btn-close btn-close-white" data-modal-action="close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="formRSVP" data-form="card/submitRSVP">
+                    <form class="formRSVP" id="rsvpForm">
                         <input type="hidden" name="thekahwin_csrf_token" value="" />
                         <input type="hidden" name="card_id" value="1129">
                         <input type="hidden" name="card_token" value="9828a2fc0cda3d0ea2b4a02f99026cb2">
@@ -572,9 +652,16 @@
 
     <!-- Card Scripts -->
             <script src="https://www.thekahwin.my//assets/theme/simply-004/script.js?v=1749917507"></script>
-            <script src="assets/js/custom-config.js"></script>
+            <!-- <script src="assets/js/custom-config.js"></script> -->
             <script src="assets/js/preloader.js"></script>
             <script src="assets/js/copy-handler.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
 
 </body>
 
@@ -599,6 +686,40 @@ document.getElementById('guestbookForm').addEventListener('submit', function(e) 
   })
   .catch(error => {
     alert('Ralat rangkaian. Sila cuba semula.');
+    console.error(error);
+  });
+});
+</script>
+
+<script>
+document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch("https://script.google.com/macros/s/AKfycbyo2JHYcYcHFiLkrLFf-zHk8x7k5-WeYL9z9gADYXezPLImYn-uG_2Ak16HazfLm5pKtA/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      // Remove any existing success message
+      const existingMsg = form.querySelector('.rsvp-success-message');
+      if (existingMsg) existingMsg.remove();
+      // Create and show thank you message
+      const successMsg = document.createElement('div');
+      successMsg.textContent = "✅ Terima kasih! RSVP anda telah dihantar.";
+      successMsg.className = "rsvp-success-message";
+      successMsg.style.cssText = "margin-top: 1rem; color: green; font-weight: bold;";
+      form.appendChild(successMsg);
+      form.reset();
+    } else {
+      alert("RSVP gagal dihantar. Sila cuba lagi.");
+    }
+  })
+  .catch(error => {
+    alert("Ralat rangkaian. Sila cuba semula.");
     console.error(error);
   });
 });

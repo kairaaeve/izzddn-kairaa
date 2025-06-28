@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
 
 @font-face {
   font-family: "Allura";
@@ -196,15 +197,6 @@ h2[text-custom="bride3_short"] {
   margin-top: -90px; /* reduce space above */
   margin-bottom: -90px; /* reduce space below */
 }
-
-.text-main { 
-   font-size: 20px !important;
-   color: #000 !important;
-   border: 1px solid #F5F5DC !important;  /* soft beige border */
-   padding: 4px !important;                /* optional spacing */
-   background-color: #f5f5dc9d !important;
-   border-radius: 17px !important;
- }
  
 
  /*UCAPAN*/
@@ -294,27 +286,157 @@ h2[text-custom="bride3_short"] {
 
 .hr-bold-gold {
   border: none;
-  height: 2px !important;
-  background-color: #f0b110; /* solid deep gold */
-  margin: 1.5rem auto;
-  width: 80%;
+  height: 1.5px !important;
+  background-color: #f7bb25; /* solid deep gold */
+  margin: 0rem auto;
+  width: 100%;
   border-radius: 3px;
-  opacity: 100%;
+  opacity: 90%;
   margin-top: 50px !important;
   margin-bottom: 50px !important;
+
+  /* ✨ GLOW EFFECT */
+  box-shadow:
+    0 0 5px #f0b110,
+    0 0 10px #f0b110,
+    0 0 15px #f0b110;
 }
+
 
 
  /*GALERI*/
- .mb-4 {  
- font-size: 30px !important;
- color: #000 !important;
- text-align: center !important;
- position: relative;
- top: 15px;
+.label-galeri {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  font-family: Quintessential !important;
+  font-size: 30px !important;
+  color: #000 !important;
+  position: relative;
+  top: 0px;
+  gap: 30px; /* Increased from 10px or 40px to give the dividers more room to grow */
+  margin-bottom: 30px !important;
+  line-height: 1
+;
+  margin: 0;
+  max-width: 100%; /* Optional: keep it from spanning full width */
 }
 
-.container-galeri {
-  background-color: #c5aef2 !important; /* if not already set elsewhere */
-  height: 100px;        /* or set fixed height like 400px */
+.title-galeri {
+margin: 0rem;
+top: 2px;
+}
+
+/*GUESTBOOK*/
+
+.symbols {
+font-size: 20px;
+margin-top: 20px !important;
+}
+
+/* ─── Cleaned Up Event Info Boxes ─── */
+
+.highlight-box {
+  background-color: #fdf9e9ce;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.details-block1 { 
+  font-family: Quintessential !important;
+  font-size: 20px !important;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  }
+
+.details-block { 
+  font-family: Quintessential !important;
+  font-size: 20px !important;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  }
+
+  .divider-gold {
+  border: none;
+  height: 1px !important;
+  background-color: #f0b110; /* solid deep gold */
+  margin: 1.5rem auto;
+  width: 50%;
+  border-radius: 3px;
+  opacity: 100%;
+  margin-bottom: 10px !important;
+  margin-top: 5px;
+  box-shadow: 0 0 6px #f0b11099;
+}
+
+.color-palette {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.color-palette span {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+.text-main { 
+   font-size: 16px !important;
+   color: #000 !important;
+   border: none !important;  /* soft beige border */
+   padding: 4px !important;                /* optional spacing */
+   margin-top: 20px;
+ }
+
+ .text-pastel {
+  font-size: 12px !important;
+  color: #000 !important;
+ }
+ 
+.dress-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* space between items */
+  margin-top: 40px;
+
+}
+
+.text-dc {
+  font-size: 16px !important;
+  color: #000 !important;
+}
+
+.text-ou {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.divider-dress {
+  width: 1px;
+  height: 110px;
+  background-color: #f0b110 !important;
+  opacity: 100%;
+  border-radius: 3px;
+  align-self: stretch; /* 💡 makes it fill vertical space of row */
+  box-shadow: 0 0 6px #f0b11099;
+}
+
+.dress-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* or start/left if you prefer */
+  text-align: center;
+  margin-bottom: 10px;
 }

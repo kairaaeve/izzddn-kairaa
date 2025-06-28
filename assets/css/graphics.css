@@ -1,16 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Meie+Script&family=Tangerine:wght@400;700&display=swap');
-
-.spinning-wreath {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 500px; /* adjust to fit */
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  animation: none !important;
-  pointer-events: none;
-  opacity: 1; /* optional fade effect */
-}
+@import url('https://fonts.googleapis.com/css2?family=Felipa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
 
 .title h2 {
   position: relative;
@@ -93,28 +83,6 @@
  background-color: #c5aef2 !important;
 }
 
-/*POP UP NAVBAR*/
-
-/* Popup container background */
-.modal-content {
-  background-color: #fdfaff !important; /* soft pastel background */
-  border-radius: 12px;
-  border: 2px solid #c5aef2;
-  box-shadow: 0 0 10px rgba(165, 125, 245, 0.2);
-}
-
-
-
-
-
-/* Header bar (KENALAN) */
-/* Modal Popup Overrides */
-.appbar-modal .modal-content {
-  background-color: #fdfaff !important;
-  border-radius: 12px;
-  border: 2px solid #c5aef2;
-  box-shadow: 0 0 10px rgba(165, 125, 245, 0.2);
-}
 
 /* Header styling */
 .appbar-modal .modal-header {
@@ -130,21 +98,25 @@
 
 /* Contact list styling */
 .appbar-modal .modal-body .list-contact label {
-  color: #6a4bc8 !important;
-  font-size: 18px;
-  margin-bottom: 0.5rem;
-  display: inline-block;
+  color: #000000 !important;
+  font-size: 20px !important;   /* slightly smaller for one-line display */
+  margin-bottom: 0rem;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  text-align: left !important;
 }
 
-/* Icon buttons (phone, WhatsApp) */
+/* Make icon buttons round */
 .appbar-modal .modal-body .list-contact a span {
-  background-color: #a47df5 !important; /* soft purple */
+  background-color: #369a52 !important;
   color: white !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  padding: 10px;
-  font-size: 16px;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 18px;
+  padding: 0 !important;
   margin-left: 8px;
   display: inline-flex;
   align-items: center;
@@ -153,20 +125,9 @@
 }
 
 .appbar-modal .modal-body .list-contact a span:hover {
-  background-color: #8e6be0 !important;
+  background-color: #87b881 !important;
 }
 
-/* Fix olive border in modal */
-.appbar-modal .modal-content {
-  border: none !important;
-  box-shadow: 0 0 10px rgba(165, 125, 245, 0.15) !important; /* optional purple glow */
-}
-
-/* Optional: strengthen modal background corners */
-.appbar-modal .modal-dialog {
-  border-radius: 16px !important;
-  overflow: hidden;
-}
 
 /* Remove thin olive line under Kenalan header */
 .appbar-modal .modal-header {
@@ -362,7 +323,6 @@
   border: 2px solid #c5aef2;
   border-radius: 12px;
   background-color: #fdfaff;
-  font-family: 'Meie Script', cursive;
 
   /* 🌟 Border glow */
   box-shadow: 0 0 12px 2px rgba(197, 174, 242, 0.5);
@@ -371,7 +331,8 @@
 .card-prayer p {
   font-size: 20px !important;
   line-height: 1.8;
-  font-family: 'Meie Script', cursive;
+  font-family: "Cormorant Upright", serif;
+  font-weight: 500;
   color: #000000 !important;   
 }
 
@@ -408,4 +369,121 @@
     grid-template-columns: repeat(2, minmax(140px, 1fr));
     gap: 8px;
   }
+}
+
+/*RSVP POP UP*/
+
+/* RSVP Theme Color Customization */
+.formRSVP .btn {
+  background-color: #a78ce3; /* matches RSVP title bar */
+  color: white;
+  border: none;
+}
+
+.formRSVP .btn:hover {
+  background-color: #9676d5; /* slightly darker hover */
+}
+
+.input-counter button {
+  background-color: #a78ce3;
+  color: white;
+  border: none;
+}
+
+.input-counter button:hover {
+  background-color: #9676d5;
+}
+
+.input-counter input.form-control {
+  border-color: #a78ce3;
+}
+
+/* RSVP Soft Purple Theme */
+.formRSVP .form-control {
+  border: 1px solid #a78ce3 !important;
+  color: #4a4a4a;
+  border-radius: 8px;
+}
+
+.formRSVP .form-control::placeholder {
+  color: #c2aee8;
+}
+
+/* Input counter buttons */
+.input-counter button {
+  background-color: #a78ce3 !important;
+  color: white !important;
+  border: 2px solid #a78ce3 !important;
+  border-radius: 6px !important;
+}
+
+.input-counter button:hover {
+  background-color: #9676d5;
+}
+
+/* Optional: Labels */
+.formRSVP label {
+  color: #a78ce3;
+  font-weight: 500;
+}
+
+/* RSVP section labels to match purple theme */
+.formRSVP label.text-sm {
+  color: #a78ce3 !important; /* soft purple */
+}
+
+/* RSVP Hantar Button - force soft purple theme */
+.formRSVP .btn.btn-main {
+  background-color: #a78ce3 !important; /* soft lavender */
+  color: #ffffff !important;           /* purple text */
+  border: 2px solid #a78ce3 !important;
+  border-radius: 8px;
+}
+
+.formRSVP .btn.btn-main:hover,
+.formRSVP .btn.btn-main:focus {
+  background-color: #d8c3f1 !important;
+  color: #a78ce3 !important;
+  border: 2px solid #a78ce3 !important;
+  box-shadow: 0 0 8px #c8acee33;
+}
+
+
+/* Pastel Calendar Styles */
+.pastel-calendar th,
+.pastel-calendar td {
+  width: 14.2%;
+  padding: 0.7rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border: 1px solid #e7dcf8;
+  background-color: #fdf9ff;
+  color: #6e5494;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.pastel-calendar th {
+  background-color: #f4ebfd;
+  color: #a78ce3;
+  font-weight: 600;
+}
+
+.pastel-calendar td:hover {
+  background-color: #f0e6fa;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.pastel-calendar .muted {
+  color: #ccc;
+}
+
+.pastel-calendar .highlight {
+  background-color: #a78ce3;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 8px #caa9f8;
 }
