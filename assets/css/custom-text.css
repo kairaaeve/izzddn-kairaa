@@ -409,8 +409,17 @@ margin-top: 20px !important;
   align-items: center;
   justify-content: center;
   gap: 40px; /* space between items */
-  margin-top: 40px;
+  margin-top: 30px;
 
+}
+
+.dress-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* or start/left if you prefer */
+  text-align: center;
+  margin-bottom: 10px;
+  max-width: 100%;
 }
 
 .text-dc {
@@ -420,7 +429,7 @@ margin-top: 20px !important;
 
 .text-ou {
   text-align: left;
-  margin-top: 10px;
+  margin-top: 13px;
   font-size: 13px !important;
 
 }
@@ -436,65 +445,3 @@ margin-top: 20px !important;
   margin: 0rem;
 }
 
-.dress-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* or start/left if you prefer */
-  text-align: center;
-  margin-bottom: 10px;
-}
-.kod-pemakaian-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-.kod-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  min-width: 140px;
-}
-
-.kod-section h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.kod-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.kod-section ul li::before {
-  content: "✢";
-  margin-right: 6px;
-}
-
-.kod-divider {
-  width: 1px;
-  height: 100%;
-  background-color: #f0b110;
-  opacity: 100%;
-  border-radius: 3px;
-  box-shadow: 0 0 6px #f0b11099;
-}
-
-/* Ensure text below is centered */
-.kod-note {
-  text-align: center;
-  font-style: italic;
-  font-size: 14px;
-  margin-top: 30px;
-}

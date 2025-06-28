@@ -173,6 +173,19 @@
   transition: background-color 0.3s ease;
 }
 
+.mb-3 {
+color: #000;
+}
+
+.col-12 {
+margin-bottom: 10px;
+}
+
+.coll-12 {
+margin-top: -25px;
+
+}
+
 .appbar-modal[data-modal="calendar"] .btn-main:hover {
   background-color: #8e6be0 !important;
 }
@@ -300,6 +313,10 @@
 }
 
 /*DOA*/
+
+.cat-love {
+margin-bottom: 10px;
+}
 
 .card-prayer {
   color: #6a4bc8 !important; /* Soft purple */
