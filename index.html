@@ -2,9 +2,6 @@
 <!DOCTYPE html>
 <html class="overflow-hidden">
 
-    <img src="assets/img/floral-top.png" class="floral-top" alt="Floral TOP Background">
-    <img src="assets/img/floral-bottom.png" class="floral-bottom" alt="Floral BOTTOM Background">
-
 <head>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-15WZ45EJ6N"></script>
@@ -38,7 +35,7 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://www.thekahwin.my/assets/css/style.css">
-    <link rel="stylesheet" href="https://www.thekahwin.my/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.thekahwin.my/assets/vendor/bootstrap/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://www.thekahwin.my/assets/vendor/venobox/venobox.css"> -->
     <link rel="stylesheet" href="https://www.thekahwin.my/assets/vendor/flipdown/flipdown.css">
     <link rel="stylesheet" href="https://www.thekahwin.my/assets/vendor/aos/aos.css">
@@ -56,77 +53,45 @@
             <link rel="stylesheet" href="assets/css/custom-text.css">
             <link rel="stylesheet" href="assets/css/graphics.css">
             
+    <!--
+      Moved gallery-collage, fadeInSmooth, rsvp-success-message, and pastel-calendar styles to assets/css/graphics.css.
+      Only music-toggle-btn CSS remains here for clarity.
+    -->
     <style>
-.gallery-collage {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  padding: 0 12px;
-}
+    /* Music Toggle Button Styles */
+    .music-toggle-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 9999;
+      background: linear-gradient(145deg, #fbe9ff, #ffe6fa);
+      border: 2px solid #d9b3e6;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 2px 2px 6px #e0c5e5, -2px -2px 6px #fff0ff;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.gallery-collage img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-@keyframes fadeInSmooth {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.rsvp-success-message {
-  animation: fadeInSmooth 0.6s ease-out;
-}
-
-/* Pastel Calendar Styles */
-.pastel-calendar th,
-.pastel-calendar td {
-  width: 14.2%;
-  padding: 0.6rem;
-  text-align: center;
-  font-size: 0.9rem;
-  border: 1px solid #e7dcf8;
-  background-color: #faf8ff;
-  color: #444;
-}
-
-.pastel-calendar .muted {
-  color: #ccc;
-}
-
-.pastel-calendar .highlight {
-  background-color: #a78ce3;
-  color: white;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-  .music-toggle-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 9999;
-    background-color: #fff8ff;
-    border: 2px solid #ddb7e0;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-  }
-
-  .music-toggle-btn:hover {
-    background-color: #f0dbf3;
-    transform: scale(1.1);
-  }
+    .music-toggle-btn:hover {
+      background: #f5d6ff;
+      transform: scale(1.1);
+    }
     </style>
     </head>
 
+<img src="assets/img/floral-top.png" class="floral-top" alt="Floral TOP Background">
+<img src="assets/img/floral-bottom.png" class="floral-bottom" alt="Floral BOTTOM Background">
+
+
 <body>
 
-  <audio id="bg-music" autoplay loop>
+  <audio id="bg-music" loop>
     <source src="assets/audio/inside-out.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
@@ -724,16 +689,10 @@
     const toggleBtn = document.getElementById('toggle-music');
 
     toggleBtn.addEventListener('click', () => {
-      if (music.muted) {
-        music.muted = false;
-        toggleBtn.textContent = '🔊';
-      } else {
-        music.muted = true;
-        toggleBtn.textContent = '🔇';
-      }
+      music.muted = !music.muted;
+      toggleBtn.textContent = music.muted ? '🔇' : '🔊';
     });
 
-    // On some mobile browsers, audio must be triggered by user interaction
     document.addEventListener('click', function enableAudioOnce() {
       music.play().catch(() => {});
       document.removeEventListener('click', enableAudioOnce);
