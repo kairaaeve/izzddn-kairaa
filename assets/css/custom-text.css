@@ -421,16 +421,19 @@ margin-top: 20px !important;
 .text-ou {
   text-align: left;
   margin-top: 10px;
+  font-size: 13px !important;
+
 }
 
 .divider-dress {
   width: 1px;
-  height: 110px;
-  background-color: #f0b110 !important;
+  height: 100px;
+  background-color: #ffb700 !important;
   opacity: 100%;
   border-radius: 3px;
   align-self: stretch; /* 💡 makes it fill vertical space of row */
   box-shadow: 0 0 6px #f0b11099;
+  margin: 0rem;
 }
 
 .dress-block {
